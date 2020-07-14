@@ -3,30 +3,42 @@ Answer the following questions for each of the data structures you implemented a
 ## Stack
 
 1. What is the runtime complexity of `push` using a list?
+    - O(1) -> because you are always just appending one thing to the end regardless of the data size
 
 2. What is the runtime complexity of `push` using a linked list?
+    - O(1) -> still constant, as you are still appending one thing to the end regardless of the data size
 
 3. What is the runtime complexity of `pop` using a list?
+    - O(1) --> regardless of the dataset, you are still just taking the last thing off of the list
 
 4. What is the runtime complexity of `pop` using a linked list?
+    - O(1) -> If you don't know how it works under the hood it is just removing one thing from the tail of the linked list, no matter the data size.
 
 5. What is the runtime complexity of `len` using a list?
+    - O(1) -> It always returns the value stored for self.size. It will not change based on the data size.
 
 6. What is the runtime complexity of `len` using a linked list?
+    - O(1) -> Still. It always returns the value stored for self.size. It will not change based on the data size.
 
 ## Queue
 
 1. What is the runtime complexity of `enqueue` using a list?
+    - O(1) -> You are always just inserting one thing at the beginning, regardless of the data size
 
 2. What is the runtime complexity of `enqueue` using a linked list?
+    - O(1) -> Still constant, as you are adding one thing to the tail end of the queue.
 
 3. What is the runtime complexity of `dequeue` using a list?
+    - O(1) --> Regardless of the dataset, you are still just taking the last thing off of the queue. It doesn't have to traverse it at all, so size of the data doesn't matter.
 
 4. What is the runtime complexity of `dequeue` using a linked list?
+    - O(1) -> If you don't know how it works under the hood it is just removing one thing from the head of the linked list, no matter the data size it will still be the same because you are just doing one thing... remove_head().
 
 5. What is the runtime complexity of `len` using a list?
+    - O(1) -> It always returns the value stored for self.size. It will not change based on the data size.
 
 6. What is the runtime complexity of `len` using a linked list?
+    - O(1) -> Still. It always returns the value stored for self.size. It will not change based on the data size.
 
 ## Doubly Linked List
 
