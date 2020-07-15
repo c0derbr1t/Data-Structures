@@ -17,52 +17,57 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
+        
+        # Case 1: value is less than self.value
         if value < self.value:
-            if not self.left:
-            # if self.left is None:
+            # IF there is no left child, insert value here
+            if self.left is None:
                 self.left = BSTNode(value)
+            # ELSE repeat the process on left subtree
             else:
                 self.left.insert(value)
+                # self.left.insert(value)  *RECURSION* we're calling the method from inside itself.
+
+        # Case 2: value is greater than or equal to self.value
         elif value >= self.value:
-            if not self.right:
-            # if self.right is None:
+            if self.right is None:
                 self.right = BSTNode(value)
             else:
                 self.right.insert(value)
-
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
+        # Case 1: self.value is equal to the target
         if self.value == target:
             return True
+        # Case 2: target is less than self.value
         if target < self.value:
-            # if not self.left:
+            # if self.left is None, it isn't in the tree
             if self.left is None:
                 return False
             else:
                 return self.left.contains(target)
+        # Case 3: otherwise
         else:
-            # if not self.right:
             if self.right is None:
                 return False
             else:
                 return self.right.contains(target)
+        
 
     # Return the maximum value found in the tree
     def get_max(self):
-        max_value = self.value
-        if self.right is None:
-           return max_value
-        else:
-            return self.right.get_max()
+        # set max_value to self.value
+        # if self.right is None
+            # return max_value
+        # else
+            # return self.right(get_max)
+         pass
 
     # Call the function `fn` on the value of each node
-    def for_each(self, cb):
-        cb(self.value)
-        if self.left is not None:
-            self.left.for_each(cb)
-        if self.right is not None:
-            self.right.for_each(cb)
+    def for_each(self, fn):
+        # recursive solution
+        pass
 
     # Part 2 -----------------------
 
