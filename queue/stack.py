@@ -1,4 +1,4 @@
-from singly_linked_list_s import LinkedList
+from singly_linked_list_q import LinkedList
 """
 A stack is a data structure whose primary purpose is to store and
 return elements in Last In First Out order. 
@@ -31,6 +31,14 @@ class Stack_lst:
             popped = self.storage.pop()
             self.size -= 1
         return popped
+        
+    # added to try different ways to do stretch in queue.py
+    def pop_first(self):
+        if self.size == 0:
+            return None
+        else:
+            self.size -= 1
+        return self.storage[0]
 
 # Implementation with *Linked List*
 class Stack:
@@ -50,4 +58,11 @@ class Stack:
             return None
         self.size -= 1
         return self.storage.remove_tail()
+
+    # added to try different ways to do stretch in queue.py
+    def pop_first(self):
+        if self.size <= 0:
+            return None
+        self.size -=1
+        return self.storage.remove_head()
 
