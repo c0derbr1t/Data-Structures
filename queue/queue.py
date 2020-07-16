@@ -1,5 +1,5 @@
-from singly_linked_list.singly_linked_list import LinkedList
-from stack.stack import Stack
+from singly_linked_list_q import LinkedList
+from stack import Stack_lst, Stack
 """
 A queue is a data structure whose primary purpose is to store and
 return elements in First In First Out order. 
