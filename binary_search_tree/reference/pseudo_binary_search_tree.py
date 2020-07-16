@@ -74,17 +74,92 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        # if the current node is None
+        # we know we've reached the end of a recursion
+        # (base case) we want to return
+        if self is None:
+            return
+        # check if we can move left
+        if self.left is not None:
+            self.left.in_order_print()
+
+        # visit the node by printing its value
+        print(self.value)
+
+        # check if we can move right
+        if self.right is not None:
+            self.right.in_order_print()
+
+    """
+        ### preorder
+        # visit logic
+        print(self.value)
+        # recurse left
+        self.left.fn()
+        # recurse right
+        self.right.fr()
+
+        ### inorder
+        # recurse left
+        self.left.fn()
+        # visit logic
+        print(self.value)
+        # recurse right
+        self.right.fr()
+
+        ### postorder
+        # recurse left
+        self.left.fn()
+        # recurse right
+        self.right.fr()
+        # visit logic
+        print(self.value)
+    """
+
 
     # Print the value of every node, starting with the given node,
-    # in an iterative breadth first traversal
+    # in an **iterative** breadth first traversal
     def bft_print(self, node):
         pass
+
+        # Use a queue to form a "line"
+        
+        # start by placing the root in the queue
+
+        # need a while loop to iterate
+        # what are we checking in the while statement?
+        # while length of queue is greater than 0
+            # dequeue item from front of queue
+            # print that item
+
+            # place current item's left node in queue if not None
+            # place current iten's right node in queue if not None
+
+
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
         pass
+
+        # Inititialize an empty stack
+        # push the root node onto the stack
+
+        # need a while loop to manage our iteration
+        # what do we check in our while statement?
+
+        # while stack is not empty, enter the while loop
+            # pop item off the stack
+            # print that item's value
+
+            # if there is a right subtree
+                # push right item onto the stack
+            
+            # if there is a left subtree
+                # push left item onto the stack
+
+            
+
 
     # Stretch Goals -------------------------
     # Note: Research may be required
