@@ -82,22 +82,13 @@ class Queue_stk:
 
         temp_store = Stack()
         temp = None
-        temp_size =  self.size
-        if self.size == 2:
-            temp = self.storage.pop()
-            temp_store.push(temp)
-            returned = self.storage.pop()
-            self.storage.push(temp)
-            self.size -= 1
+        temp_size =  0
 
-            return returned
-
-        if self.size > 2:
-            while temp_size != 1:
+        if self.size >= 2:
+            while temp_size != self.size - 1:
                 temp = self.storage.pop()
                 temp_store.push(temp)
-                temp_size -= 1
-                print("hi")
+                temp_size += 1
             
             returned = self.storage.pop()
             self.size -= 1
@@ -105,7 +96,6 @@ class Queue_stk:
             while temp_store.__len__() != 0:
                 temp = temp_store.pop()
                 self.storage.push(temp)
-                print("ABC")
 
         return returned
 
